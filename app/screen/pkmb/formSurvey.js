@@ -15,11 +15,11 @@ import { Icon } from "react-native-elements";
 const screenHeight = Dimensions.get('screen').height
 
 
-function ClientData() {
+function FormSurvey() {
     return(
         <View style={styles.container} >
             
-            <View style={{ backgroundColor:"#FFFFFF", width : "100%" }}>
+            <View style={{ backgroundColor:"#FFFFFF", width : "100%", padding:10 }}>
               <Image style={{width:"100%", height:199}} source={require('../../../app/assets/poster.jpeg')}></Image>
             </View>
 
@@ -145,7 +145,7 @@ function ClientData() {
     )
 }
 
-export default ClientData
+export default FormSurvey
 
 const textBoxStyle = {
   alignItems: "center",
@@ -159,8 +159,8 @@ const styles = StyleSheet.create({
     container: {
       flexDirection: "column",
       backgroundColor: "transparent",
-      height: screenHeight-299,
-      // flex:1
+      height: screenHeight,
+      flex:1
       
     },
     box:{ 

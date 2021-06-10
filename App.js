@@ -1,17 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {StyleSheet, View, Dimensions } from 'react-native';
+import {StyleSheet, View, Dimensions, SafeAreaView } from 'react-native';
 import {MainPKMB, HeaderBox, FooterBox, SlideOne, ClientData} from './app/index'
 
 
 const { width, height } = Dimensions.get('screen');
 
-// const screenHeight = Dimensions.get('screen').height
+const screenHeight = Dimensions.get('screen').height
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {console.log(height-150)}
 
       <HeaderBox  ></HeaderBox>
       {/* <Text>Open up App.js to start working on your app!</Text>  */}

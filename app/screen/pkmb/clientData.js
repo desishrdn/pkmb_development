@@ -12,24 +12,22 @@ import {
 } from 'react-native'
 import { Icon } from "react-native-elements";
 
-const screenHeight = Dimensions.get('screen')
+const screenHeight = Dimensions.get('screen').height
 
 
 function ClientData() {
     return(
         <View style={styles.container} >
             
-            {/* <View style={{ backgroundColor:"#FFFFFF", width : "100%" }}>
+            <View style={{ backgroundColor:"#FFFFFF", width : "100%", padding:10, shadowColor:"#00000" }}>
               <Image style={{width:"100%", height:199}} source={require('../../../app/assets/poster.jpeg')}></Image>
-            </View> */}
+            </View>
 
-            <View style={{
-              backgroundColor:"#FFFFFF",
-              paddingBottom:20
-            }}>
             <ScrollView style={{
-              backgroundColor:"#fff", 
+              backgroundColor:"#FFFFFF", 
+              paddingBottom : 20
             }}>
+           
                 <View style={{padding:10, justifyContent:"center", alignItems:'center'}} >
                   <TouchableOpacity  style={styles.box} 
                       onPress={()=> {
@@ -186,11 +184,9 @@ function ClientData() {
                       </View>
                   </TouchableOpacity>
                 </View>
-           
-                
+          
             </ScrollView>
 
-            </View>
             
         </View>
     )
@@ -201,8 +197,6 @@ export default ClientData
 const textBoxStyle = {
   alignItems: "center",
   flexDirection:"row",
-
-  
 };
 
 
@@ -210,8 +204,8 @@ const styles = StyleSheet.create({
     container: {
       flexDirection: "column",
       backgroundColor: "transparent",
-      height: screenHeight.height,
-      // flex:1
+      height: screenHeight,
+      flex:1
       
     },
     box:{ 
@@ -220,7 +214,7 @@ const styles = StyleSheet.create({
       width: "90%",
       padding: 10,
       justifyContent:"center",
-      elevation: 5
+      // elevation: 5
     },
     textStyle : {
       color: '#202020',
