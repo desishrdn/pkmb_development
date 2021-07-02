@@ -1,7 +1,7 @@
 import React from 'react'
-import {useNavigation,NavigationContainer, StackActions} from '@react-navigation/native'
+import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-import {Home, BackTest} from '../index'
+import { SurveyScreen, PKMScreen, TipsScreen } from '../screen/index'
 
 function Route(){
     const Stack = createStackNavigator()
@@ -9,8 +9,9 @@ function Route(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="home" component={Home} options={{ headerShown : false}} />
-                <Stack.Screen name="backtest" component={BackTest} options={{ headerShown : false}} />
+                <Stack.Screen name="PKMScreen" component={PKMScreen} options={{ headerShown : false}} />
+                <Stack.Screen name="TipsScreen" component={TipsScreen} options={{ headerShown : false}} />
+                <Stack.Screen name="SurveyScreen" component={SurveyScreen} options={{ headerShown : false}} />
             </Stack.Navigator>
         </NavigationContainer>
 
