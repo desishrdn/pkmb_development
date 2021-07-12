@@ -19,7 +19,7 @@ function HeaderBox() {
     const route = useRoute()
     
     const BackButtonHandler = () => {
-        route.name === "TipsScreen" ? navigation.navigate("SurveyScreen") : navigation.replace("TipsScreen") 
+        (route.name === "TipsScreen" ? navigation.navigate("ClientScreen") : (route.name === "SurveyScreen" ? navigation.navigate("ClientScreen")  : navigation.replace("TipsScreen") ))
     }
 
     return (
@@ -32,7 +32,7 @@ function HeaderBox() {
                                 onPress={() => BackButtonHandler()}/>
                 </View>
                 <View>
-                    <Text style={styles.textHeader}> {route.name === "SurveyScreen" ? "Survey PKM Bermakna" : "PKM Bermakna"}</Text>
+                    <Text style={styles.textHeader}> {route.name === "SurveyScreen" ? "PKM Bermakna" : "PKM Bermakna"}</Text>
                 </View>
                 <View></View>
             </View>

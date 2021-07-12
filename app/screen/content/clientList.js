@@ -10,7 +10,7 @@ import {
   Dimensions
 } from 'react-native'
 import styles from '../../styles/styles';
-import { Card, CardItem, Body } from "react-native-elements";
+import { Card } from "react-native-elements";
 import ImageViewer from 'react-native-image-zoom-viewer'; 
 import {useNavigation, useRoute} from '@react-navigation/native';
 
@@ -32,7 +32,7 @@ function ClientList() {
 
   const ListData = () => {
     return(
-      <TouchableOpacity onPress={() => onclickClient()}>
+      <TouchableOpacity onPress={() => navigation.navigate('SurveyScreen')}>
           <Card containerStyle={{backgroundColor:"#f5f9fe"}} >       
               <Text style={stylesApp.textStyle}>900010078 - Indah2 Maulina</Text>
           </Card>
@@ -41,11 +41,7 @@ function ClientList() {
   }
   
   const navigation = useNavigation()
-  const route = useRoute()
   
-  const onclickClient = () => {
-      route.name === "SurveyScreen" ? navigation.navigate("PKMScreen") : navigation.navigate("PKMScreen")
-  }
 
     return(
     

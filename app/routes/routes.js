@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
-import { SurveyScreen, PKMScreen, TipsScreen } from '../screen/index'
+import { ClientScreen, SurveyScreen, TipsScreen } from '../screen/index'
 
 function Route(){
     const Stack = createStackNavigator()
@@ -9,8 +9,8 @@ function Route(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="PKMScreen" component={PKMScreen} options={{ headerShown : false}} />
                 <Stack.Screen name="TipsScreen" component={TipsScreen} options={{ headerShown : false}} />
+                <Stack.Screen name="ClientScreen" component={ClientScreen} options={{ headerShown : false}} />
                 <Stack.Screen name="SurveyScreen" component={SurveyScreen} options={{ headerShown : false}} />
             </Stack.Navigator>
         </NavigationContainer>
